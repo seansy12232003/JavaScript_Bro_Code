@@ -422,4 +422,174 @@
 
 
 
-// 
+// ELEMENT SELECTORS
+//      Methods used to target and manipulate HTML elements
+//      They allow you to select one or multiple HTML elements from the DOM
+
+
+//      1. document.getElementById()        // ELEMENT OR NULL
+//      1. document.getElementClassName()   // HTML COLLECTION
+//      1. document.getElementsByTagName()  // HTML COLLECTION
+//      1. document.querySelector()         // FIRST ELEMENT OR NULL
+//      1. document.querySelectorAll()      // NODE LIST
+
+
+
+
+
+
+
+
+
+// DOM NAVIGATION
+
+// .firstElementChild
+// .lastElementChild
+// .nextElementSibling
+// .previousElementSibling
+// .parentElement
+// .children
+
+
+
+
+
+
+
+
+
+// ADD & CHANGE HTML
+
+
+// // STEP 1 CREATE THE ELEMENT
+
+// const newH1 = document.createElement("h1");
+
+
+// // STEP 2 ADD ATTRIBUTES/PROPERTIES
+
+// newH1.textContent = "I like pizza!";
+// newH1.id = "myH1";
+// newH1.style.color = "tomato";
+// newH1.style.textAlign = "center";
+
+
+// // STEP 3 APPEND ELEMENT TO DOM
+
+// document.body.append(newH1);
+// document.body.prepend(newH1);
+// document.getElementById("box1").append(newH1);
+
+// const box2 = document.getElementById("box2");
+//     // document.body.insertBefore(newElement, currentElement);
+// document.body.insertBefore(newH1, box2);
+
+// const boxes = document.querySelectorAll(".box");
+// document.body.insertBefore(newH1, boxes[0]);
+
+
+// // REMOVE HTML ELEMENT
+
+// document.body.removeChild(newH1);
+// document.getElementById("box1").removeChild(newH1);
+
+
+
+
+
+
+
+// EVENT LISTENER
+//     MOUSE EVENTS
+//          click, mouseover, mouseout
+//     KEY EVENTS
+//          keydown, keyup
+//     .addEventListener(event, callback)
+
+// EXAMPLE
+// myBox.addEventListener("click", event => {
+// event.target.style.backgroundColor = "tomato";   
+// })
+
+
+// EXAMPLE
+// document.addEventListener("keydown", event => {
+//      if(event.key.startsWith("Arrow")){
+//          switch(event.key){
+//              case "ArrowUp":
+//                  y -= moveAmount;
+//                  break;
+//              case "ArrowDown":
+//                  y += moveAmount;
+//                  break;
+//              case "ArrowLeft":
+//                  x -= moveAmount;
+//                  break;
+//              case "ArrowRight":
+//                  x += moveAmount;
+//                  break;
+//          }
+//          myBox.style.top = `${y}px`;
+//          myBox.style.left = `${x}px`;
+//      }
+// })
+
+
+
+
+
+
+
+
+
+// HIDE AND SHOW HTML IMAGES
+
+// myButton.addEventListener("click", event => {
+//     if(myImg.style.display = "none"){
+//         myImg.style.display = "block";
+//         myButton.textContent = "Hide";
+//     }
+//     else{
+//         myImg.style.display = "none";
+//         myButton.textContent = "Show";
+//     }
+// })
+
+
+
+// NodeList = Static Collection of HTML elements by (id, class, element)
+//            Similar to an array, but no (map, filter, reduce) functions
+//            NodeList won't update to automatically reflect changes
+
+
+
+
+// classList = Element property in JS used to interact with an element's 
+//             list of classes (CSS classes)
+//             ALlows you to make resuable classes for many elements
+//             across your webpage
+
+// add()
+// remove()
+// toggle(Remove if present, Add if not)
+// replace(oldClass, newClass)
+// contains()
+
+// CSS
+// .hover{
+//     background-color: black;
+//     color: white;
+// }
+
+// JS
+// myButton.addEventListener("mouseover", event => {
+//    event.target.classList.add("hover"); 
+//    OR
+//    event.target.classList.toggle("hover"); 
+// })
+
+// myButton.addEventListener("mouseout", event => {
+//    event.target.classList.remove("hover");
+//    OR
+//    event.target.classList.toggle("hover"); 
+// })
