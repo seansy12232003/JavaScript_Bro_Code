@@ -411,3 +411,15 @@
 
 
 // DOM = DOCUMENT OBJECT MODEL
+//      Object{} that represents the page you see in the web browser and provides
+//      you with an API to interact with it.
+//      JS can access the DOM to dynamically change content, structure, and style
+
+
+
+
+
+
+
+
+// 
