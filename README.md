@@ -1,5 +1,9 @@
 # JavaScript_Bro_Code
 
+## Description
+
+A tracker of the projects done through the BroCode JavaScript Tutorial youtube video.
+
 ## Programs
 - Calculator Program
 - Counter
